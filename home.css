@@ -1,0 +1,169 @@
+body {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  margin: 0;
+  height: 100vh;
+  padding: 0 32px;
+  background: #eff9ff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  width: 100%;
+  z-index: 4;
+  background-color: #333;
+  color: white;
+  padding: 0px 32px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+nav h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul {
+  font-size: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.background {
+  position: fixed;
+  top: -50vmin;
+  left: -50vmin;
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 50% 50% 60% 40% / 40% 50% 50% 50%;
+  background-color: #65c8ff;
+}
+
+.background::after {
+  content: "";
+  position: fixed;
+  right: -50vmin;
+  bottom: -50vmin;
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 50% 50% 60% 40% / 40% 50% 50% 50%;
+  background-color: #143d81;
+}
+
+
+main {
+  margin-top: 302px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-show img {
+  width: 200px;
+  height: auto;
+  opacity: 0;
+  /* Initially hide images */
+  transition: opacity 1s;
+  /* Smooth transition */
+}
+
+.slide-show img.active {
+  opacity: 1;
+  /* Show active image */
+}
+
+.fade {
+  animation: slide 5s infinite;
+  /* Apply slide animation to the slideshow */
+}
+
+.banner {
+  border-radius: 20px;
+  background-color: rgb(213, 238, 248);
+  padding: 20px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.banner h2 {
+  font-size: 26px;
+  font-weight: 2500;
+  color: #333;
+}
+
+.banner {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.content pre {
+  font-size: 16px;
+  font-weight: bold;
+
+}
+
+.background::after {
+  content: "";
+  position: fixed;
+  right: -50vmin;
+  bottom: -50vmin;
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 50% 50% 60% 40% / 40% 50% 50% 50%;
+  background-color: #143d81;
+}
+
+footer {
+  width: 100%;
+  margin-top: 265px;
+  background-color: #333;
+  color: white;
+  padding: 0px 32px;
+  text-align: center;
+  opacity: 0.6;
+}
